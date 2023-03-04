@@ -24,6 +24,14 @@ const PRIMARY = {
   darker: '#061B64',
   contrastText: '#fff',
 };
+const LIQUID = {
+  lighter: '#D1E9FC',
+  light: '#76B0F1',
+  main: '#2065D1',
+  dark: '#103996',
+  darker: '#061B64',
+  contrastText: '#fff',
+};
 
 const SECONDARY = {
   lighter: '#D6E4FF',
@@ -51,8 +59,24 @@ const SUCCESS = {
   darker: '#08660D',
   contrastText: GREY[800],
 };
+const VEGGY = {
+  lighter: '#E9FCD4',
+  light: '#AAF27F',
+  main: '#54D62C',
+  dark: '#229A16',
+  darker: '#08660D',
+  contrastText: GREY[800],
+};
 
 const WARNING = {
+  lighter: '#FFF7CD',
+  light: '#FFE16A',
+  main: '#FFC107',
+  dark: '#B78103',
+  darker: '#7A4F01',
+  contrastText: GREY[800],
+};
+const BREAD = {
   lighter: '#FFF7CD',
   light: '#FFE16A',
   main: '#FFC107',
@@ -69,6 +93,14 @@ const ERROR = {
   darker: '#7A0C2E',
   contrastText: '#fff',
 };
+const FRUIT = {
+  lighter: '#FFE7D9',
+  light: '#FFA48D',
+  main: '#FF4842',
+  dark: '#B72136',
+  darker: '#7A0C2E',
+  contrastText: '#fff',
+};
 
 const palette = {
   common: { black: '#000', white: '#fff' },
@@ -76,6 +108,10 @@ const palette = {
   secondary: SECONDARY,
   info: INFO,
   success: SUCCESS,
+  veggy: VEGGY,
+  bread:BREAD,
+  fruit:FRUIT,
+  liquid:LIQUID,
   warning: WARNING,
   error: ERROR,
   grey: GREY,
