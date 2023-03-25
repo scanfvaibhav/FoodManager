@@ -1,7 +1,7 @@
 import React from 'react';
 import {config} from './config';
 import  './style.css'
-const FoodManager=()=>{
+const FoodManager=({user,signOut})=>{
 
     setTimeout(function() {
         window.location.reload();
@@ -37,6 +37,10 @@ const FoodManager=()=>{
     </div>
 );
     return <div> 
+        <>
+      <h1>Hello {user.username}</h1>
+      <button onClick={signOut}>Sign out</button>
+    </>
         <h1 className="StyledDay">{currentConfig.msg}</h1>
         <h2 className="StyledDay">{dayConfig.day}</h2>
         <h2 className="StyledDay">{today.getDate()+"/"+(Number(today.getMonth())+1)+"/"+today.getFullYear()}</h2>

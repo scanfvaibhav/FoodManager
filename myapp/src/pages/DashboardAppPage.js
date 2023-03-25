@@ -20,18 +20,21 @@ import {
 import {getFoodItems} from '../hooks/useConfig';
 // ----------------------------------------------------------------------
 
-export default function DashboardAppPage() {
+export default function DashboardAppPage({user,signOut}) {
   const theme = useTheme();
   const {dayFood,msg,foodtype} = getFoodItems();
+  
   return (
     <>
       <Helmet>
         <title>PlanTheMeal</title>
       </Helmet>
-
+      <>
+      <button onClick={signOut}>Sign out</button>
+    </>
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Hi, {msg}
+          Hi,{user.username} {msg}
         </Typography>
         <Typography variant="h5" sx={{ mb: 5 }}>
           As per plan menu for {foodtype} is as follows

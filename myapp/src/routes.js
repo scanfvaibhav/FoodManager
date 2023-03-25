@@ -12,21 +12,21 @@ import DashboardAppPage from './pages/DashboardAppPage';
 
 // ----------------------------------------------------------------------
 
-export default function Router() {
+export default function Router(props) {
   const routes = useRoutes([
     {
       path: '/dashboard',
-      element: <DashboardLayout />,
+      element: <DashboardLayout {...props}/>,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
-        { path: 'app', element: <DashboardAppPage /> },
+        { path: 'app', element: <DashboardAppPage {...props}/> },
         { path: 'user', element: <UserPage /> },
         { path: 'products', element: <ProductsPage /> },
         { path: 'blog', element: <BlogPage /> },
       ],
     },
     {
-      path: 'login',
+      path: '/login',
       element: <LoginPage />,
     },
     {
