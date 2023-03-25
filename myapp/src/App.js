@@ -8,24 +8,12 @@ import { StyledChart } from './components/chart';
 
 // ----------------------------------------------------------------------
 
-
-import { Amplify } from 'aws-amplify';
-
-import { withAuthenticator } from '@aws-amplify/ui-react';
-import '@aws-amplify/ui-react/styles.css';
-
-import awsExports from './aws-exports';
-Amplify.configure(awsExports);
-
-function App(props) {
-  
+export default function App() {
   return (
     <ThemeProvider>
-    <ScrollToTop />
-    <StyledChart />
-    <Router {...props}/> 
-  </ThemeProvider>
+      <ScrollToTop />
+      <StyledChart />
+      <Router /> 
+    </ThemeProvider>
   );
 }
-
-export default withAuthenticator(App);

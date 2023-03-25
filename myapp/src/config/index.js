@@ -111,13 +111,7 @@ export const config=
             "itemId": "soup",
             "type": "appetizers",
             "name": "टमाटर सूप",
-            "discription": "टमाटर सूप",
-            "instructions": [
-              "Heat a nonreactive pot or enameled dutch oven over medium heat. Add butter then add chopped onions. Sauté 10-12 minutes, stirring occasionally, until softened and golden. Add minced garlic and sauté 1 minute until fragrant.",
-              "Add crushed tomatoes with their juice, chicken stock, chopped basil, sugar (or add sugar to taste), and black pepper. Stir together and bring to a boil then reduce heat, partially cover with lid and simmer for 10 minutes.",
-              "You can leave your soup with a chunky consistency, but if you like a blended/creamy soup, use an immersion blender to blend the soup in the pot to desired consistency or transfer to a blender in batches and blend until smooth (being careful not to over-fill the blender with hot liquid), then return blended soup to the pot over medium heat.",
-              "Add 1/2 cup heavy cream, 1/3 cup freshly grated parmesan cheese and return to a simmer. Season to taste with salt and pepper if needed and turn off the heat.",
-              "Ladle into warm bowls and top with more parmesan and chopped fresh basil."]
+            "discription": "टमाटर सूप"
           }
         ]
       },
@@ -512,9 +506,9 @@ export const config=
       "lunch": {
         "items": [
           {
-            "itemId": "palakpaneer",
+            "itemId": "rajma",
             "type": "curry","color":"veggy",
-            "name": "palak paneer",
+            "name": "rajma/ chana",
             "description": "palak paneer",
             "instructions":["take blanched palak, 1 inch ginger, 1 clove garlic and 4 green chilli.",
               "blend to smooth paste without adding any water. keep aside.",
