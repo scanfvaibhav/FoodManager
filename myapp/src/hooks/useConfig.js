@@ -3,6 +3,7 @@ import {config} from '../config';
 export function getFoodItems(){
     const today = new Date();
     const day=today.getDay();
+    
     const dayConfig=config[day];
     const curHr = today.getHours();
     const currentConfig={

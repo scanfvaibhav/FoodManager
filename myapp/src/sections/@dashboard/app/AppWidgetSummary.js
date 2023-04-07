@@ -6,6 +6,8 @@ import { Card, Typography } from '@mui/material';
 import { fShortenNumber } from '../../../utils/formatNumber';
 // components
 import Iconify from '../../../components/iconify';
+import Button from 'src/theme/overrides/Button';
+import { useVoice } from 'src/hooks/useVoice';
 
 // ----------------------------------------------------------------------
 
@@ -31,6 +33,7 @@ AppWidgetSummary.propTypes = {
 };
 
 export default function AppWidgetSummary({ title,discription, total, icon, color = 'primary', sx, ...other }) {
+  const {playVoice} = useVoice("");
   return (
     <Card
       sx={{
@@ -64,6 +67,9 @@ export default function AppWidgetSummary({ title,discription, total, icon, color
       <Typography variant="subtitle2" sx={{ opacity: 0.72 }}>
         {discription}
       </Typography>
+      <button onClick={()=>{
+        playVoice(discription)
+      }}>Play</button>
     </Card>
   );
 }

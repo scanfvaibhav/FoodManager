@@ -18,11 +18,16 @@ import {
   AppConversionRates,
 } from '../sections/@dashboard/app';
 import {getFoodItems} from '../hooks/useConfig';
+import {useFullMenu} from '../services/basic';
+
 // ----------------------------------------------------------------------
 
 export default function DashboardAppPage() {
   const theme = useTheme();
   const {dayFood,msg,foodtype} = getFoodItems();
+  const {data}=useFullMenu({},{onSuccess:(res)=>{
+    debugger
+}});
   return (
     <>
       <Helmet>
