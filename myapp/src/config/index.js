@@ -548,3 +548,5 @@ export const config=
       }
     }
   }
+export const DAY_MAP = ["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
+

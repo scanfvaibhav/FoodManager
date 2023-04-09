@@ -5,6 +5,7 @@ import SimpleLayout from './layouts/simple';
 //
 import BlogPage from './pages/BlogPage';
 import UserPage from './pages/UserPage';
+import UpdateMeal from './pages/UpdateMeal';
 import LoginPage from './pages/LoginPage';
 import Page404 from './pages/Page404';
 import ProductsPage from './pages/ProductsPage';
@@ -20,7 +21,8 @@ export default function Router() {
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
-        { path: 'All Menu', element: <UserPage /> },
+        { path: 'full-menu', element: <UserPage /> },
+        { path: 'update-meal', element: <UpdateMeal /> },
         { path: 'products', element: <ProductsPage /> },
         { path: 'blog', element: <BlogPage /> },
       ],
@@ -33,6 +35,7 @@ export default function Router() {
       element: <SimpleLayout />,
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
+        { path: 'full-menu', element: <UserPage /> },
         { path: '404', element: <Page404 /> },
         { path: '*', element: <Navigate to="/404" /> },
       ],

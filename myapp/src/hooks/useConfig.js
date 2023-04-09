@@ -23,5 +23,5 @@ export function getFoodItems(){
              currentConfig.foodtype='dinner';
          }
      const dayFood = dayConfig[currentConfig.foodtype].items;
-     return {dayFood:dayFood,msg:currentConfig.msg,foodtype:currentConfig.foodtype};
+     return {dayFood:dayFood,msg:currentConfig.msg,foodtype:currentConfig.foodtype,day};
 };

@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import { Helmet } from 'react-helmet-async';
 import { faker } from '@faker-js/faker';
 // @mui
@@ -24,9 +25,13 @@ import {useFullMenu} from '../services/basic';
 
 export default function DashboardAppPage() {
   const theme = useTheme();
-  const {dayFood,msg,foodtype} = getFoodItems();
-  const {data}=useFullMenu({},{onSuccess:(res)=>{
+  const {msg,foodtype,day} = getFoodItems();
+
+  const [dayFood,setDayFood] =useState([]);
+  const {data}=useFullMenu({},{
+    onSuccess:(res)=>{
     debugger
+    setDayFood(res);
 }});
   return (
     <>
@@ -42,17 +47,21 @@ export default function DashboardAppPage() {
           As per plan menu for {foodtype} is as follows
         </Typography>
         <Grid container spacing={3}>
-        {dayFood.map((obj)=>
+        {dayFood.filter((res)=>{
+          return res.day==day;
+        }).map((obj)=>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title={obj.name} discription ={obj.discription} total={obj.quantity} color={obj?.color} icon={'lucide:vegan'} />
+            <AppWidgetSummary title={obj.item} discription ={obj.description} total={obj.quantity} color={obj?.color} icon={'lucide:vegan'} />
           </Grid>)
           }
         
-          {dayFood.map((obj)=>
+          {dayFood.filter((res)=>{
+          return res.day==day;
+        }).map((obj)=>
           <Grid item xs={12} md={6} lg={8}>
             <AppReceipe
-              title={obj.name}
-              subheader={obj.discription}
+              title={obj.item}
+              subheader={obj.description}
               instructions={obj?.instructions}
             />
             </Grid>)

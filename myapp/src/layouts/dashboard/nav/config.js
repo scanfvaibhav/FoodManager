@@ -12,8 +12,13 @@ const navConfig = [
     icon: icon('ic_analytics'),
   },
   {
-    title: 'user',
-    path: '/dashboard/user',
+    title: 'Full Menu',
+    path: '/dashboard/full-menu',
+    icon: icon('ic_user'),
+  },
+  {
+    title: 'Update Meal',
+    path: '/dashboard/update-meal',
     icon: icon('ic_user'),
   },
   {
