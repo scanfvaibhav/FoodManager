@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Customers from './Customers'
+import FoodManager from './FoodManager'
 import { BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 
 
@@ -12,15 +11,11 @@ class App extends Component {
 
       <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Simple React App</h1>
-        </header>
           <Switch>
                 <Route exact path= "/" render={() => (
-                  <Redirect to="/customerlist"/>
+                  <Redirect to="/FoodManager"/>
                 )}/>
-                 <Route exact path='/customerlist' component={Customers} />
+                 <Route exact path='/FoodManager' component={FoodManager} />
           </Switch>
       </div>
     </Router>
