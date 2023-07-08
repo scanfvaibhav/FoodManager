@@ -38,9 +38,9 @@ const Ingradients =()=>{
         <br/>
         <br/>
         <div class="list">
-        <ul>
+        <ol>
             {response?Object.keys(response).map((ele)=><li><b>{ele}</b>--{response[ele]}</li>):""}
-            </ul>
+            </ol>
         </div>
         
    </div>

@@ -38,14 +38,13 @@ if (curHr < 12) {
     {/* <li>{obj.discription}</li> */}
     {/* <li>"Quantity: "{obj.quantity}</li> */}
     <br/>
-    <br/>
     </div>
 );
     return <div> 
         <h1 className="StyledDay">{currentConfig.msg}</h1>
         <h2 className="StyledDay">{dayConfig.day}</h2>
         <h2 className="StyledDay">{today.getDate()+"/"+(Number(today.getMonth())+1)+"/"+today.getFullYear()}</h2>
-        <div className="StyledDay"><ul>{foodList}</ul></div>
+        <div className="StyledDay"><ol>{foodList}</ol></div>
         <p className="StyledDay">"Thank You !!"</p>
         <button type="button" onClick={()=>{
             window.location.href = window.location.origin+"/Ingradients";
