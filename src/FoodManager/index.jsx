@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Button } from 'react-bootstrap';
 import  './style.css'
 const FoodManager=()=>{
 
@@ -35,7 +34,7 @@ if (curHr < 12) {
    
     const foodList = nowFood.map((obj)=>
     <div>
-    <li>{obj.name}</li>
+    <li><b>{obj.name}</b></li>
     {/* <li>{obj.discription}</li> */}
     {/* <li>"Quantity: "{obj.quantity}</li> */}
     <br/>
@@ -46,7 +45,7 @@ if (curHr < 12) {
         <h1 className="StyledDay">{currentConfig.msg}</h1>
         <h2 className="StyledDay">{dayConfig.day}</h2>
         <h2 className="StyledDay">{today.getDate()+"/"+(Number(today.getMonth())+1)+"/"+today.getFullYear()}</h2>
-        <div className="StyledDay">{foodList}</div>
+        <div className="StyledDay"><ul>{foodList}</ul></div>
         <p className="StyledDay">"Thank You !!"</p>
         <button type="button" onClick={()=>{
             window.location.href = window.location.origin+"/Ingradients";
