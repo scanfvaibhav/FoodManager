@@ -39,7 +39,7 @@ const Ingradients =()=>{
         <br/>
         <div class="list">
         <ol>
-            {response?Object.keys(response).map((ele)=><li><b>{ele}</b>--{response[ele]}</li>):""}
+            {response?Object.keys(response).sort().map((ele)=><li><b>{ele}</b>--{response[ele]}</li>):""}
             </ol>
         </div>
         
