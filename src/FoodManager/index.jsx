@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Button } from 'react-bootstrap';
 import  './style.css'
 const FoodManager=()=>{
 
@@ -35,8 +36,8 @@ if (curHr < 12) {
     const foodList = nowFood.map((obj)=>
     <div>
     <li>{obj.name}</li>
-    <li>{obj.discription}</li>
-    <li>"Quantity: "{obj.quantity}</li>
+    {/* <li>{obj.discription}</li> */}
+    {/* <li>"Quantity: "{obj.quantity}</li> */}
     <br/>
     <br/>
     </div>
@@ -47,6 +48,9 @@ if (curHr < 12) {
         <h2 className="StyledDay">{today.getDate()+"/"+(Number(today.getMonth())+1)+"/"+today.getFullYear()}</h2>
         <div className="StyledDay">{foodList}</div>
         <p className="StyledDay">"Thank You !!"</p>
+        <button type="button" onClick={()=>{
+            window.location.href = window.location.origin+"/Ingradients";
+        }}>"List of all items"</button>
     </div>
 }
 export default FoodManager;

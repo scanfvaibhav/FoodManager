@@ -30,8 +30,12 @@ const Ingradients =()=>{
     }
     
   
-    return <div>
-            {response?Object.keys(response).map((ele)=><li>{ele}--{response[ele]}</li>):""}
+    return <div><h2>List of items required </h2>
+    <button type="button" onClick={()=>{
+            window.location.href = window.location.origin+"/FoodManager";
+        }}>"Now items"</button>
+        <br/>
+            {response?Object.keys(response).map((ele)=><li><b>{ele}</b>--{response[ele]}</li>):""}
     </div>
 }
 export default Ingradients;
