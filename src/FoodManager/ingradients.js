@@ -16,10 +16,10 @@ const Ingradients =()=>{
                
                 allItems.forEach(({ingredients=[]})=>{
                     ingredients.forEach((element)=>{
-                        if(itemCount[element]){
-                            itemCount[element]=itemCount[element]+1;
+                        if(itemCount[element.toLowerCase()]){
+                            itemCount[element.toLowerCase()]=itemCount[element.toLowerCase()]+1;
                         }else{
-                            itemCount[element]=1;
+                            itemCount[element.toLowerCase()]=1;
                         }
                     })
                 });
