@@ -15,7 +15,7 @@ const FoodManager=()=>{
 const curHr = today.getHours();
 let dayConfig={};
  
-if (curHr < 12) {
+if (curHr < 11) {
     currentConfig.msg='Good morning';
     currentConfig.foodtype='breakfast';
     
