@@ -15,7 +15,7 @@ const FoodManager=()=>{
     foodtype:"",
 }
 const curHr = today.getHours();
-let dayConfig={};
+const [dayConfig,setDayConfig]=useState({});
 const footType ={
     1:'breakfast',
     2:'lunch',
@@ -36,12 +36,20 @@ const [foodState,setFoodstate] = useState({
     type: currentConfig.foodtype,
     day:day,
 });
-   fetch("https://62d8480d90883139358ec41f.mockapi.io/FoodManager").then(response => response.json())
+useEffect(()=>{
+    const dayConfig = allMeal[day];
+    if(dayConfig){
+    setDayConfig(dayConfig);
+    setNowfood(dayConfig[footType[currentConfig.foodtype]].items);
+    }
+},[allMeal]);
+useEffect(()=>{
+    fetch("https://62d8480d90883139358ec41f.mockapi.io/FoodManager").then(response => response.json())
    .then(data => {
     setAllMeal(data);
-     dayConfig = data[day];
-        setNowfood(dayConfig[footType[currentConfig.foodtype]].items);
    });
+},[])
+   
    const showNextMeal = ()=>{
        if(foodState.type===3){
         setFoodstate({
@@ -62,7 +70,6 @@ const [foodState,setFoodstate] = useState({
         });
    }
    useEffect(()=>{
-       debugger
        if(allMeal.length>0)
     setNowfood(allMeal[foodState.day][footType[foodState.type]].items);
    },[foodState]);
